@@ -17,7 +17,9 @@ class TodoTile extends StatelessWidget {
       leading: Checkbox(
         checkColor: Colors.green,
         value: item.list[index].isCompleted,
-        onChanged: (_) => {context.read<ManageTodo>().updateStatus(index)},
+        onChanged: (_) => {
+          //todo
+        },
       ),
       title: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -49,7 +51,7 @@ class TodoTile extends StatelessWidget {
       trailing: IconButton(
         icon: const Icon(Icons.delete),
         onPressed: () {
-          context.read<ManageTodo>().removeItem(item.list[index]);
+          //todo
         },
       ),
       tileColor: item.list[index].isCompleted
@@ -60,6 +62,5 @@ class TodoTile extends StatelessWidget {
               PriorityEnum.HIGHT => Colors.redAccent
             },
     );
-    ;
   }
 }
