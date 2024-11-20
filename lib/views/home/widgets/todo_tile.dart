@@ -18,7 +18,7 @@ class TodoTile extends StatelessWidget {
         checkColor: Colors.green,
         value: item.list[index].isCompleted,
         onChanged: (_) => {
-          //todo
+          context.read<ManageTodo>().updateStatus(index),
         },
       ),
       title: Row(
@@ -51,7 +51,7 @@ class TodoTile extends StatelessWidget {
       trailing: IconButton(
         icon: const Icon(Icons.delete),
         onPressed: () {
-          //todo
+          context.read<ManageTodo>().removeItem(item.list[index]);
         },
       ),
       tileColor: item.list[index].isCompleted

@@ -7,6 +7,7 @@ class ManageTodo extends ChangeNotifier {
   List<TodoItem> get list => _list;
 
   void addItem(TodoItem todoItem) {
+    print("add");
     list.add(todoItem);
     notifyListeners();
   }
